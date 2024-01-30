@@ -25,5 +25,12 @@ const app = createApp({
             }
         },
     },
+    
+    mounted(){
+        setInterval(()=>{
+            this.nextImg();
+        }, 2000);
+    }
+
 }).mount('#app')
 
