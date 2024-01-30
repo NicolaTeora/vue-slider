@@ -10,7 +10,11 @@ const app = createApp({
 
     methods: {
         nextImg(){
-            this.imgActive++;
+            if (this.imgActive >= this.slides.length - 1) {
+                this.imgActive = 0;
+            } else {
+                this.imgActive++;
+            }
         }
     }
 }).mount('#app')
