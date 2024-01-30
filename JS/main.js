@@ -15,7 +15,15 @@ const app = createApp({
             } else {
                 this.imgActive++;
             }
-        }
-    }
+        },
+
+        prevImg(){
+            if (this.imgActive <= 0) {
+                this.imgActive = this.slides.length - 1
+            } else {
+                this.imgActive--;
+            }
+        },
+    },
 }).mount('#app')
 
