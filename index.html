@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuovo Progetto</title>
+    <title>Vue Slider</title>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,22 +22,19 @@
     <script type="text/javascript" src="./JS/main.js" defer></script>
 </head>
 <body>
-    <div id="root">
+    <div id="app">
         <div class="wrapper p-6">
             <div class="container_gallery">
+                
                 <div class="slides_container" id="img-gallery-slide">
-                    <img src="./img/01.webp" class="slide visible" alt="">
-                    <img src="./img/02.webp" class="slide" alt="">
-                    <img src="./img/03.webp" class="slide" alt="">
-                    <img src="./img/04.webp" class="slide" alt="">
-                    <img src="./img/05.webp" class="slide" alt=""> 
+                    <img :src="slides.[imgActive]" class="slide visible" alt="slide" >
                 </div>
     
                 <!-- frecce di scorrimento -->
-                <div class="img_up">
+                <div class="img_up" >
                     <i class="fa-solid fa-up-long"></i>
                 </div>
-                <div class="img_down">
+                <div class="img_down" @click="nextImg()">
                     <i class="fa-solid fa-down-long"></i>
                 </div>
     
