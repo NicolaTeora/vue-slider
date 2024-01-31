@@ -24,12 +24,20 @@ const app = createApp({
                 this.imgActive--;
             }
         },
+
+        showSlides(){
+            setInterval(()=>{
+                this.nextImg();
+            }, 2000);
+        },
+
+        stopShowSlides(){
+            // TODO: stop showSlides with mouseover
+        },
     },
     
     mounted(){
-        setInterval(()=>{
-            this.nextImg();
-        }, 2000);
+        this.showSlides();
     }
 
 }).mount('#app')
