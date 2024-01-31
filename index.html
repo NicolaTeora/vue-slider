@@ -24,7 +24,7 @@
 <body>
     <div id="app">
         <div class="wrapper p-6">
-            <div class="container_gallery">
+            <div class="container_gallery" @mouseover=" stopShowSlides()">
                 
                 <div class="slides_container" id="img-gallery-slide">
                     <img :src="slides[imgActive]" class="slide" alt="slide" >
